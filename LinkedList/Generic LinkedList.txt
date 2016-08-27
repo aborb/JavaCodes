@@ -1,0 +1,175 @@
+
+package practice;
+
+
+
+/**
+ *
+ * @author Ashmita
+ */
+public class LinkedList<T> {
+    Node<T> head;
+    
+    public LinkedList()  // initialise head node, constructor
+    {
+        head = null;
+    }
+    
+   public void insertAtBeg(T d)
+   { 
+        Node<T> newnode = new Node<T>(d);
+        newnode.next = head;
+        head = newnode;
+       
+   }
+   
+   public void insertAtEnd(T d)
+   {
+       Node<T> newnode = new Node<T>(d);
+       Node<T> move;
+       move = head;
+       if(head == null)
+       {
+           head = newnode;
+           newnode.next = null;
+       }
+       else
+       {
+            while(move.next != null)
+            {
+                move = move.next;
+            }
+             move.next = newnode;
+             newnode.next = null;
+       }
+       
+   }
+   
+   public void delete(T d)
+   {
+       Node<T> move;
+       move = head;
+       if(move == null)
+           System.out.println("Empty List");
+       else 
+       {
+          if (move.data == d)    //if data found in first node
+              head = move.next;
+          else
+          {   
+              while(move.next.data == d)
+             {
+                move = move.next;
+             }
+             if(move.next.next == null)   //if data found in last node
+                 move.next = null;
+             else
+                 move.next = move.next.next;  //if data found in between node
+          }
+       }
+                    
+   }
+   
+   public void display()
+   {
+       Node<T> move;
+       move = head;
+       if(move == null)
+       {
+           System.out.print("LinkedList is empty");
+       }
+       else
+       {   System.out.println();
+           while(move != null)
+           {
+               System.out.print(move.data + " ");
+               move=move.next;
+           }
+       }
+   }
+   
+ }
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package practice;
+
+/**
+ *
+ * @author Ashmita
+ */
+public class Node<T> {
+    T data;
+    Node<T> next;
+    
+    public Node(T d)  //constructor to put data
+    {
+        data = d;
+    }
+    
+}
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package practice;
+
+import java.util.Scanner;
+
+
+
+/**
+ *
+ * @author Ashmita
+ */
+public class Practice {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+    LinkedList<Integer> list = new LinkedList<>();
+    LinkedList<String> list2 = new LinkedList<>();
+  //  LinkedList list2 = new LinkedList();
+    
+
+    
+    list.insertAtEnd(1);
+    list.insertAtEnd(5);
+    list.insertAtEnd(2);
+    
+    list2.insertAtBeg("Hello");
+    list2.insertAtBeg("World");
+    
+
+
+   // list2.insertAtBeg(8);
+ //   list2.insertAtBeg(6);
+  //  list2.insertAtBeg(7);
+
+    
+   // list.display();
+       list.display();
+       list2.display();
+
+
+    
+    }
+      
+  }
+    
+
+
+          
+
+       
+       
+

@@ -1,0 +1,23 @@
+ public void removeDupWithoutBuffer()
+   {
+       Node move = head;
+       Node temp ;
+       while(move != null)
+       {
+           temp = move;
+           while(temp.next != null) 
+           {
+               if(move.data == temp.next.data)
+               {
+                   temp.next = temp.next.next;
+               }
+               else
+               {
+                   temp = temp.next;
+               }
+            }
+            move = move.next;         
+   
+        } 
+          
+    }   

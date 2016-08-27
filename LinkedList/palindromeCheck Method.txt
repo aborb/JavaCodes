@@ -1,0 +1,21 @@
+public void palindromeCheck(LinkedList list)
+   {
+      Node move = head; boolean check;
+      Set<Integer> hset = new HashSet<Integer>();
+      
+      while(move != null)
+      {
+        check = hset.add(move.data);
+        if (check == false)
+        {
+            hset.remove(move.data);
+        }
+        move = move.next; 
+      }
+      
+      if (hset.size() > 1)
+          System.out.println("Not a palindrome");
+      else
+          System.out.println("Yes, it is a palindrome");
+       
+    }      

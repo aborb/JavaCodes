@@ -1,0 +1,20 @@
+public void removeKthToLast(int k)
+   {
+       Node move = head;
+       Node temp = head;
+       while(move.next != null)
+       {
+           while (k != 1)
+           {
+               move = move.next;
+               k--;
+           }
+          
+           if(move.next != null)
+           {
+               move = move.next;
+               temp = temp.next; 
+           }
+       }
+       System.out.println(temp.data);   
+    }   

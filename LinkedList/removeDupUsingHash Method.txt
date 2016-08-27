@@ -1,0 +1,26 @@
+/* 3 classes - Node.java, LinkedList.java, LinkedListMain.java
+* This method is part of LinkedList java. Head node is declared in this class.
+*/
+
+public void removeDupUsingHash()
+   {
+       Set<Character> hashset = new HashSet<Character>();
+       Node move = head;
+       Node prev = head;
+       boolean check;
+       while(move != null)
+       {
+           check = hashset.add(move.data);
+           if(check == false)
+           {
+               prev.next = move.next;
+               move = move.next;
+           }
+           else
+           {
+               prev = move;
+               move = move.next;
+           }
+      
+               
+       }
