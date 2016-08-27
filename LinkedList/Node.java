@@ -1,9 +1,6 @@
 package practice;
 
-/**
- *
- * @author Ashmita
- */
+
 public class Node {
     int data;
     Node next;

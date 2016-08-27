@@ -2,10 +2,7 @@ package practice;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Ashmita
- */
+
 public class LinkedListMain {
 
     /**

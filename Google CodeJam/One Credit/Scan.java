@@ -19,7 +19,6 @@ class Scan
     public Scan()
     {
         in=System.in;
-    //    in = "C:\\Users\\Ashmita\\Downloads\A-smallpractice.in";
     }
     public int scan()throws IOException    //Scan method used to scan buf
     {

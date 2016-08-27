@@ -5,10 +5,7 @@
  */
 package practice;
 
-/**
- *
- * @author Ashmita
- */
+
 public class LinkedList {
     Node head;
     
